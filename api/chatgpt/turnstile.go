@@ -373,9 +373,9 @@ func getFuncMap() FloatMap {
 
 func ProcessTurnstile(dx, p string) string {
 	// current don't process turnstile
-	if os.Getenv("PROCESS_TURNSTILE") != "true" {
-		return ""
-	}	
+	//if os.Getenv("PROCESS_TURNSTILE") != "true" {
+	//	return ""
+	//}	
 	tokens, _ := getTurnstileToken(dx, p)
 	var tokenList turnTokenList
 	err := json.Unmarshal([]byte(tokens), &tokenList)
